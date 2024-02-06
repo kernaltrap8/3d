@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "./include/window.hpp"
+#include "./include/g_functions.hpp"
 
 int main() {
     drawWindow();

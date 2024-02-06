@@ -1,19 +1,10 @@
 #include <X11/Xlib.h>
 #include <stdio.h>
 #include <err.h>
+#include "./include/g_functions.hpp"
+#include "./include/g_x11_variables.h"
 
-static Display* dpy;
-static int scr;
-static Window root;
-
-int screenHeight = 1920;
-int screenWidth = 1080;
-
-#define POS_X screenHeight / 2
-#define POS_Y screenWidth / 2
-#define WIN_WIDTH   500
-#define WIN_HEIGHT  500
-#define WIN_BORDER  15
+using namespace Nx3d;
 
 int drawWindow() {
     Window win;
@@ -27,10 +18,11 @@ int drawWindow() {
     // creating window
     win = XCreateSimpleWindow(dpy, root, POS_X, POS_Y, WIN_WIDTH, WIN_HEIGHT, WIN_BORDER, BlackPixel(dpy, scr), WhitePixel(dpy, scr));
     // map window to display server
+    XStoreName(dpy, win, WIN_NAME);
     XMapWindow(dpy, win);
 
     while(XNextEvent(dpy, &ev) == 0) {
-
+        Nx3d::RendererStart();
     }
 
     // unmap window

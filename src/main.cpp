@@ -2,6 +2,6 @@
 #include "./include/g_functions.hpp"
 
 int main() {
-    drawWindow();
+    NxWindow::Spawn();
     return 0;
 }

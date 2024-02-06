@@ -1,3 +1,8 @@
 // Global function declaration
 int drawWindow();
-void Nx3d::RendererStart();
+namespace Nx3d {
+    void RendererStart();
+}
+namespace NxWindow {
+    int Spawn();
+}

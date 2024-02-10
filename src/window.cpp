@@ -3,6 +3,7 @@
 #include <err.h>
 #include "./include/g_functions.hpp"
 #include "./include/g_x11_variables.h"
+#include "./include/engine.hpp"
 
 namespace NxWindow {
     int Spawn() {
@@ -15,7 +16,7 @@ namespace NxWindow {
         scr = DefaultScreen(dpy);
         root = RootWindow(dpy, scr);
         // creating window
-        win = XCreateSimpleWindow(dpy, root, POS_X, POS_Y, WIN_WIDTH, WIN_HEIGHT, WIN_BORDER, BlackPixel(dpy, scr), WhitePixel(dpy, scr));
+        win = XCreateSimpleWindow(dpy, root, POS_X, POS_Y, WIN_WIDTH, WIN_HEIGHT, WIN_BORDER, BlackPixel(dpy, BACKGROUND_COLOR), WhitePixel(dpy, BACKGROUND_COLOR));
         // map window to display server
         XStoreName(dpy, win, WIN_NAME);
         XMapWindow(dpy, win);

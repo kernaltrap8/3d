@@ -6,3 +6,7 @@ namespace Nx3d {
 namespace NxWindow {
     int Spawn();
 }
+namespace NxEngine {
+    char EngineInit();
+    char InitColor(char b_color);
+}

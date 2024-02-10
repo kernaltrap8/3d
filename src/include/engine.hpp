@@ -1,0 +1,7 @@
+#define BACKGROUND_COLOR
+#define FOREGROUND_COLOR
+
+#define WHITE  0xFFFFFF
+#define RED    0xFF0000
+#define BLACK  0x000000
+#define YELLOW 0xFFFB00

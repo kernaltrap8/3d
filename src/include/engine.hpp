@@ -1,3 +1,3 @@
 #define BACKGROUND_COLOR
 #define FOREGROUND_COLOR
-#define VERSION "v0.3-dev"
+#define VERSION "v0.4-dev"
